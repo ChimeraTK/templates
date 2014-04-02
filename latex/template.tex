@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper]{scrartcl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Default packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{textcomp}%\textmu 
+\usepackage{graphicx}
+\usepackage{subfig}%allow subfigures
+\usepackage{amsmath}%improve layout of formulas
+\usepackage{color}
+\usepackage{units}%\unitfrac (nice m/s in text and math mode)
+\usepackage{url}
+\usepackage{booktabs}%\toprule, \midrule, bottomrule in tables
+\usepackage{xspace}%automatically add space at the end of macros
+\usepackage{upgreek}%\upright greek letters in math environment
+\usepackage{authblk}%several authors with different affiliations
+\usepackage{svn-multi}%svn revision in the tex file
+\usepackage{threeparttable}% for footnotes within tables
+
+%% clickable links in pdf
+\usepackage[pdftex,bookmarks=true,breaklinks=true,bookmarksnumbered=true,colorlinks=true,linkcolor=webgreen,citecolor=webred,urlcolor=webblue]{hyperref}
+%% link colors
+\definecolor{webred}{rgb}{0.5, 0, 0}
+\definecolor{webgreen}{rgb}{0, 0.5, 0}
+\definecolor{webblue}{rgb}{0, 0, 0.5}
+
+% for footnotes within tables
+\usepackage{threeparttable}
+
+% urls in blue
+%\newcommand{\blueurl}[1]{\textcolor{blue}{\underline{\url{#1}}}}
+
+
+%Command to allow footnotes within floats (tables, figures....)
+%Use \floatingfootnotemark inside the float, which only places the mark and
+%counts up the footnote counter.
+%Immediately after the float you put the footnote text. We will see if it
+%shows up on the right page....
+\newcommand{\floatingfootnotemark}{\addtocounter{footnote}{1} \footnotemark[\value{footnote}]}
+\newcommand{\floatingfootnotetext}[1]{\footnotetext[\value{footnote}]{#1}}
+
+%file with the svn revision, generated using svnversion
+\input{svnrevision.tex}
+
+\title{Template for \LaTeX -based MTCA4U Documentation}
+\date{\svnrevision\\ PDF build \today}
+\author[1]{John Doe}
+
+\affil[1]{Deutsches Elektronen-Synchrotron DESY, Hamburg, Germany}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is where the document really begins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\section{First Section}
+\url{https://svnsrv.desy.de/public/mtca4u}
+
+\end{document}
