@@ -14,7 +14,7 @@ using namespace boost::unit_test_framework;
 
 // This just thows the int -1 if you put true as argument.
 void throwIfTrue(bool doThrow) {
-  if (doThrow) {
+  if(doThrow) {
     throw - 1;
   }
 }
